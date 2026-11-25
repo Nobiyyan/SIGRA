@@ -1,0 +1,30 @@
+sigra/
+├── README.md
+├── .gitignore
+├── docs/                  # dokumen cakupan & aturan bisnis (yang lu kirim)
+├── database/
+│   ├── 01_schema.sql      # CREATE TABLE + constraint
+│   ├── 02_views.sql
+│   ├── 03_procedures.sql  # FEFO, distribusi, skor prioritas
+│   ├── 04_triggers.sql    # audit log, validasi stok
+│   ├── 05_seed.sql        # data dummy
+│   └── erd/               # ERD + export gambar
+├── backend/
+│   ├── .env.example
+│   ├── package.json
+│   └── src/
+│       ├── index.js
+│       ├── config/        # db pool, env
+│       ├── routes/
+│       ├── controllers/
+│       ├── services/      # query SQL
+│       ├── middlewares/   # auth JWT, role guard
+│       └── validators/    # zod
+└── frontend/
+    └── src/
+        ├── api/
+        ├── components/
+        ├── layouts/
+        ├── pages/         # publik, admin, gudang, posko, warga
+        ├── router/
+        └── stores/
